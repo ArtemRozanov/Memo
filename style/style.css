@@ -1,0 +1,381 @@
+/*------------------------------------------------*/
+@import url('./fonts/fonts.css');
+@import url('./env.css');
+/*------------------------------------------------*/
+body{
+    font-family: "SF Pro Display";
+    padding: 0;
+    margin: 0;
+}
+/*------------------------------------------------*/
+header{
+    max-width: 100%;
+    margin: 0;
+    background-color: #00000056;
+    backdrop-filter: blur(10px);
+    padding: var(--main-padding);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+}
+header > .main-block{
+    max-width: var(--main-block-width);
+    margin: auto;
+}
+header > .main-block > a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/*------------------------------------------------*/
+footer{
+    max-width: 100%;
+    margin: 0;
+    background-color: #0000006c;
+    padding: var(--main-padding);
+    color: #ffffff;
+}
+footer >.main-block{
+    max-width: var(--main-block-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*------------------------------------------------*/
+main{
+    max-width: var(--main-block-width);
+    margin: 0 auto;
+}
+section{
+    background-color: #0000002d;
+    padding: var(--main-padding);
+    border-radius: 30px;
+    margin: var(--main-section-margin);
+}
+h1.main{
+    margin: var(--main-section-margin);
+}
+h1{
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 25px;
+    margin: 0;
+    line-height: 50px;
+}
+hr {
+    border: none;
+    border-radius: 10px;
+    overflow: visible;
+    height: 5px;
+    background-color: #0000002d;
+}
+/*------------------------------------------------*/
+#flexbox > .example{
+    padding: var(--main-padding);
+    margin: var(--main-section-margin);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+#flexbox > .example > .border {
+    border: 1px dashed #00000056;
+}
+#flexbox > .example > .display.flex{
+    display: flex;
+}
+#flexbox > .example > .display.inline-flex{
+    display: inline-flex;
+}
+#flexbox > .example > .display > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .flex-direction.row{
+    display: flex;
+    flex-direction: row;
+}
+#flexbox > .example > .flex-direction.row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#flexbox > .example > .flex-direction.column{
+    display: flex;
+    flex-direction: column;
+}
+#flexbox > .example > .flex-direction.column-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#flexbox > .example > .flex-direction > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .flex-wrap.nowrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+#flexbox > .example > .flex-wrap.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+#flexbox > .example > .flex-wrap.wrap-reverse{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+#flexbox > .example > .flex-wrap > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 40%;
+}
+/*-------------------*/
+#flexbox > .example > .flex-flow.row-nowrap{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#flexbox > .example > .flex-flow.column-reverse{
+    display: flex;
+    flex-flow: column-reverse;
+}
+#flexbox > .example > .flex-flow.column-wrap{
+    display: flex;
+    flex-flow: column wrap;
+}
+#flexbox > .example > .flex-flow.row-reverse-wrap-reverse{
+    display: flex;
+    flex-flow: row-reverse wrap-reverse;
+}
+#flexbox > .example > .flex-flow > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 40%;
+}
+/*-------------------*/
+#flexbox > .example > .order{
+    display: flex;
+    align-items: flex-start;
+}
+#flexbox > .example > .order > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 40%;
+}
+#flexbox > .example > .order.no0 > .act{
+    order: 0;
+    background-color: #00000096;
+}
+#flexbox > .example > .order.no-1 > .act{
+    order: -1;
+    background-color: #00000096;
+}
+#flexbox > .example > .order.no1 > .act{
+    order: 1;
+    background-color: #00000096;
+}
+/*-------------------*/
+#flexbox > .example > .justify-content.flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+#flexbox > .example > .justify-content.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+#flexbox > .example > .justify-content.center{
+    display: flex;
+    justify-content: center;
+}
+#flexbox > .example > .justify-content.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+#flexbox > .example > .justify-content.space-around{
+    display: flex;
+    justify-content: space-around;
+}
+#flexbox > .example > .justify-content.space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+#flexbox > .example > .justify-content > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .align-items.flex-start{
+    display: flex;
+    align-items: flex-start;
+}
+#flexbox > .example > .align-items.flex-end{
+    display: flex;
+    align-items: flex-end;
+}
+#flexbox > .example > .align-items.center{
+    display: flex;
+    align-items: center;
+}
+#flexbox > .example > .align-items.baseline{
+    display: flex;
+    align-items: baseline;
+}
+#flexbox > .example > .align-items.stretch{
+    display: flex;
+    align-items: stretch;
+}
+#flexbox > .example > .align-items{
+    height: 200px;
+}
+#flexbox > .example > .align-items > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .align-self.flex-start > .act{
+    align-self: flex-start;
+}
+#flexbox > .example > .align-self.flex-end > .act{
+    align-self: flex-end;
+}
+#flexbox > .example > .align-self.center > .act{
+    align-self: center;
+}
+#flexbox > .example > .align-self.baseline > .act{
+    align-self: baseline;
+}
+#flexbox > .example > .align-self.stretch > .act{
+    align-self: stretch;
+}
+#flexbox > .example > .align-self{
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+}
+#flexbox > .example > .align-self > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .align-content.flex-start{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: flex-start;
+}
+#flexbox > .example > .align-content.flex-end{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: flex-end;
+}
+#flexbox > .example > .align-content.center{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: center;
+}
+#flexbox > .example > .align-content.space-between{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: space-between;
+}
+#flexbox > .example > .align-content.space-around{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: space-around;
+}
+#flexbox > .example > .align-content.stretch{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: stretch;
+}
+#flexbox > .example > .align-content.space-evenly{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    align-content: space-evenly;
+}
+#flexbox > .example > .align-content > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 30%;
+}
+/*-------------------*/
+#flexbox > .example > .flex-grow.no0 > .act{
+    flex-grow: 0;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-grow.no1 > .act{
+    flex-grow: 1;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-grow{
+    display: flex;
+}
+#flexbox > .example > .flex-grow > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+/*-------------------*/
+#flexbox > .example > .flex-shrink.no0 > .act{
+    flex-shrink: 0;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-shrink.no1 > .act{
+    flex-shrink: 1;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-shrink{
+    display: flex;
+}
+#flexbox > .example > .flex-shrink > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 40%;
+}
+/*-------------------*/
+#flexbox > .example > .flex-basis.no30 > .act{
+    flex-basis: 30%;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-basis.no50 > .act{
+    flex-basis: 50%;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-basis.content > .act{
+    flex-basis: content;
+    background-color: #00000096;
+}
+#flexbox > .example > .flex-basis{
+    display: flex;
+}
+#flexbox > .example > .flex-basis > div{
+    background-color: #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}

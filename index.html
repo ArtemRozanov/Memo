@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./style/icon.svg" type="image/svg">
+    <title>Общая документация</title>
+</head>
+<body>
+    <!------------------------------------------------------------------>
+    <header>
+        <div class="main-block"> <a href="#top">Общая документация</a></div>
+    </header>
+    <!------------------------------------------------------------------>
+    <main>
+        <!------------------------------------------------------------------>
+        <div class="navigation">
+            <h1 class="main">Навигация</h1>
+            <nav>
+                <li>
+                    <a href="#layout">Верстка</a>
+                    <ul>
+                        <li><a href="#flexbox">Flexbox</a>
+                            <ul>
+                                <li><a href="#display">Display</a></li>
+                                <li><a href="#flex-direction">Flex-direction</a></li>
+                                <li><a href="#flex-wrap">Flex-wrap</a></li>
+                                <li><a href="#flex-flow">Flex-flow</a></li>
+                                <li><a href="#order">Order</a></li>
+                                <li><a href="#justify-content">Justify-content</a></li>
+                                <li><a href="#align-items">Align-items</a></li>
+                                <li><a href="#align-self">Align-self</a></li>
+                                <li><a href="#align-content">Align-content</a></li>
+                                <li><a href="#flex-grow">Flex-grow</a></li>
+                                <li><a href="#flex-shrink">Flex-shrink</a></li>
+                                <li><a href="#flex-basis">Flex-basis</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#ubuntu">Ubuntu</a></li>
+            </nav>
+        </div>
+        <!------------------------------------------------------------------>
+        <div class="content-block">
+            <h1 id="layout" class="main">Верстка</h1>
+            <!------------------------------------------------------------------>
+            <section id="flexbox">
+                <h1>Flexbox</h1>
+                <p>Test</p>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="display">display</h2>
+                <p>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.</p>
+                <p><b>Применяется ко:</b> всем элементам.</p>
+                <ul>
+                    <li><b>flex</b> - Элемент ведёт себя как блочный и выкладывает содержимое согласно флекс-модели.</li>
+                    <li><b>inline-flex</b> - Элемент ведёт себя как строчный и выкладывает содержимое согласно флекс-модели.</li>
+                </ul>
+                <p><b>Flex:</b></p>
+                <div class="example">
+                    Пример:
+                    <div class="border display flex">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Inline-flex:</b></p>
+                <div class="example">
+                    Пример:
+                    <div class="border display inline-flex">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-direction">flex-direction</h2>
+                <p>Свойство flex-direction задаёт направление основных осей в контейнере и тем самым определяет положение флексов в контейнере. На само направление также влияет значение атрибута dir у контейнера.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <ul>
+                    <li><b>row</b> - главная ось направлена так же, как и ориентация текста, по умолчанию слева направо. Если значение dir задано как rtl, то направление оси идёт справа налево.</li>
+                    <li><b>row-reverse</b> - похоже на значение row, но меняются местами начальная и конечная точки и главная ось направлена справа налево. Если значение dir задано как rtl, то направление оси идёт слева направо.</li>
+                    <li><b>column</b> - главная ось располагается вертикально и направлена сверху вниз.</li>
+                    <li><b>column-reverse</b> - главная ось располагается вертикально, но меняется положение начальной и конечной точек и ось направлена снизу вверх.</li>
+                </ul>
+                <p><b>Row:</b></p>
+                <div class="example">
+                    <div class="border flex-direction row">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Row-reverse:</b></p>
+                <div class="example">
+                    <div class="border flex-direction row-reverse">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Column:</b></p>
+                <div class="example">
+                    <div class="border flex-direction column">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Column-reverse:</b></p>
+                <div class="example">
+                    <div class="border flex-direction column-reverse">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-wrap">flex-wrap</h2>
+                <p>Свойство flex-wrap Указывает, следует ли флексам располагаться в одну строку или можно занять несколько строк. Если перенос строк допускается, то свойство также позволяет контролировать направление, в котором выкладываются строки.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b> nowrap.</p>
+                <ul>
+                    <li><b>nowrap</b> - флексы выстраиваются в одну линию.</li>
+                    <li><b>wrap</b> - флексы выстраиваются в несколько строк, их направление задаётся свойством flex-direction.</li>
+                    <li><b>wrap-reverse</b> - флексы выстраиваются в несколько строк, в направлении, противоположном flex-direction.</li>
+                </ul>
+                <p><b>Nowrap:</b></p>
+                <div class="example">
+                    <div class="border flex-wrap nowrap">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Wrap:</b></p>
+                <div class="example">
+                    <div class="border flex-wrap wrap">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Wrap-reverse:</b></p>
+                <div class="example">
+                    <div class="border flex-wrap wrap-reverse">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-flow">flex-flow</h2>
+                <p>Свойство flex-flow является сокращённым свойством для отдельных свойств flex-direction и flex-wrap.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b> row nowrap.</p>
+                <p><b>Row nowrap:</b></p>
+                <div class="example">
+                    <div class="border flex-flow row-nowrap">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Column-reverse:</b></p>
+                <div class="example">
+                    <div class="border flex-flow column-reverse">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Column wrap:</b></p>
+                <div class="example">
+                    <div class="border flex-flow column-wrap">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Row-reverse wrap-reverse:</b></p>
+                <div class="example">
+                    <div class="border flex-flow row-reverse-wrap-reverse">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="order">order</h2>
+                <p>Свойство order определяет порядок вывода флексов внутри флекс-контейнера. Элементы располагаются согласно значениям свойства order от меньшего к большему. При равных значениях order элементы выводятся в том порядке, в каком они появляются в исходном коде.</p>
+                <p><b>Применяется к:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b> 0.</p>
+                <p><b>Order 0:</b></p>
+                <div class="example">
+                    <div class="border order no0">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Order -1:</b></p>
+                <div class="example">
+                    <div class="border order no-1">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Order 1:</b></p>
+                <div class="example">
+                    <div class="border order no1">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="justify-content">justify-content</h2>
+                <p>Свойство justify-content определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. Это делается после того, как применяются размеры и автоматические отступы, за исключением ситуации, когда по крайней мере у одного элемента flex-grow больше нуля. При этом не остаётся никакого свободного пространства для манипулирования.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b> flex-start.</p>
+                <ul>
+                    <li><b>flex-start</b> - флексы прижаты к началу строки.</li>
+                    <li><b>flex-end</b> - флексы прижаты к концу строки.</li>
+                    <li><b>center</b> - флексы выравниваются по центру строки.</li>
+                    <li><b>space-between</b> - флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.</li>
+                    <li><b>space-around</b> - флексы равномерно распределяются по всей строке. Пустое пространство перед первым и после последнего элементов равно половине пространства между двумя соседними элементами.</li>
+                    <li><b>space-evenly</b> - флексы распределяются так, что расстояние между любыми двумя соседними элементами, а также перед первым и после последнего, было одинаковым.</li>
+                </ul>
+                <p><b>Flex-start:</b></p>
+                <div class="example">
+                    <div class="border justify-content flex-start">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-end:</b></p>
+                <div class="example">
+                    <div class="border justify-content flex-end">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Center:</b></p>
+                <div class="example">
+                    <div class="border justify-content center">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-between:</b></p>
+                <div class="example">
+                    <div class="border justify-content space-between">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-around:</b></p>
+                <div class="example">
+                    <div class="border justify-content space-around">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-evenly:</b></p>
+                <div class="example">
+                    <div class="border justify-content space-evenly">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="align-items">align-items</h2>
+                <p>Свойство align-items выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении.</p>
+                <p><b>Применяется к:</b> flex контейнерам.</p>
+                <p><b>Значение по умолчанию:</b> stretch.</p>
+                <ul>
+                    <li><b>flex-start</b> - флексы выравниваются в начале поперечной оси контейнера.</li>
+                    <li><b>flex-end</b> - флексы выравниваются в конце поперечной оси контейнера.</li>
+                    <li><b>center</b> - флексы выравниваются по линии поперечной оси.</li>
+                    <li><b>baseline</b> - флексы выравниваются по их базовой линии.</li>
+                    <li><b>stretch</b> - флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера.</li>
+                </ul>
+                <p><b>Flex-start:</b></p>
+                <div class="example">
+                    <div class="border align-items flex-start">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-end:</b></p>
+                <div class="example">
+                    <div class="border align-items flex-end">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Center:</b></p>
+                <div class="example">
+                    <div class="border align-items center">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Baseline:</b></p>
+                <div class="example">
+                    <div class="border align-items baseline">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Stretch:</b></p>
+                <div class="example">
+                    <div class="border align-items stretch">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="align-self">align-self</h2>
+                <p>Свойство align-self выравнивает флекс-элементы текущей строки, переписывая значение align-items.</p>
+                <p><b>Применяется кo:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b> auto.</p>
+                <ul>
+                    <li><b>flex-start</b> - элемент выравнивается в начале поперечной оси контейнера.</li>
+                    <li><b>flex-end</b> - элемент выравнивается в конце поперечной оси контейнера.</li>
+                    <li><b>center</b> - элемент выравнивается по центральной линии на поперечной оси.</li>
+                    <li><b>baseline</b> - элемент выравнивается по базовой линии текста.</li>
+                    <li><b>stretch</b> - элемент растягивается таким образом, чтобы занять всё свободное пространство контейнера по поперечной оси.</li>
+                </ul>
+                <p><b>Flex-start:</b></p>
+                <div class="example">
+                    <div class="border align-self flex-start">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-end:</b></p>
+                <div class="example">
+                    <div class="border align-self flex-end">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Center:</b></p>
+                <div class="example">
+                    <div class="border align-self center">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Baseline:</b></p>
+                <div class="example">
+                    <div class="border align-self baseline">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Stretch:</b></p>
+                <div class="example">
+                    <div class="border align-self stretch">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="align-content">align-content</h2>
+                <p>Свойство align-content задаёт тип выравнивания строк внутри flex контейнера по поперечной оси при наличии свободного пространства.</p>
+                <p><b>Применяется кo:</b> flex контейнеру.</p>
+                <p><b>Значение по умолчанию:</b> stretch.</p>
+                <ul>
+                    <li><b>flex-start</b> - строки располагаются в начале поперечной оси. Каждая следующая строка идёт вровень с предыдущей.</li>
+                    <li><b>flex-end</b> - строки располагаются начиная с конца поперечной оси. Каждая предыдущая строка идёт вровень со следующей.</li>
+                    <li><b>center</b> - строки располагаются по центру контейнера.</li>
+                    <li><b>space-between</b> - строки равномерно распределяются в контейнере и расстояние между ними одинаково.</li>
+                    <li><b>space-around</b> - строки равномерно распределяются таким образом, чтобы пространство между двумя соседними строками было одинаковым. Пустое пространство перед первой строкой и после последней строки равно половине пространства между двумя соседними строками.</li>
+                    <li><b>space-evenly</b> - строки распределяются равномерно. Пустое пространство перед первой строкой и после последней строки имеет ту же ширину, что и у других строк.</li>
+                    <li><b>stretch</b> - строки равномерно растягиваются, заполняя свободное пространство.</li>
+                </ul>
+                <p><b>Flex-start:</b></p>
+                <div class="example">
+                    <div class="border align-content flex-start">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-end:</b></p>
+                <div class="example">
+                    <div class="border align-content flex-end">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Center:</b></p>
+                <div class="example">
+                    <div class="border align-content center">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-between:</b></p>
+                <div class="example">
+                    <div class="border align-content space-between">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-around:</b></p>
+                <div class="example">
+                    <div class="border align-content space-around">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Space-evenly:</b></p>
+                <div class="example">
+                    <div class="border align-content space-evenly">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Stretch:</b></p>
+                <div class="example">
+                    <div class="border align-content stretch">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-grow">flex-grow</h2>
+                <p>Свойство flex-grow задает коэффициент роста flex для заданного числа. Отрицательное значение не валидно.</p>
+                <p><b>Применяется кo:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b> 0.</p>
+                <p><b>Flex-grow 0:</b></p>
+                <div class="example">
+                    <div class="border flex-grow no0">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-grow 1:</b></p>
+                <div class="example">
+                    <div class="border flex-grow no1">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-shrink">flex-shrink</h2>
+                <p>Свойство flex-shrink задает коэффициент сжатия flex с заданным числом. Отрицательное значение не валидно.</p>
+                <p><b>Применяется кo:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b> 1.</p>
+                <p><b>Flex-shrink 0:</b></p>
+                <div class="example">
+                    <div class="border flex-shrink no0">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-shrink 1:</b></p>
+                <div class="example">
+                    <div class="border flex-shrink no1">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <hr>
+                <!------------------------------------------------------------------>
+                <h2 id="flex-basis">flex-basis</h2>
+                <p>Свойство flex-basis определяет основу флекса, которая является начальным размером элемента. Похоже на свойства width и height, к которым добавляется содержимое элемента.</p>
+                <p><b>Применяется кo:</b> flex элементам.</p>
+                <p><b>Значение по умолчанию:</b> auto.</p>
+                <p><b>Flex-basis 30:</b></p>
+                <div class="example">
+                    <div class="border flex-basis no30">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-basis 50:</b></p>
+                <div class="example">
+                    <div class="border flex-basis no50">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <p><b>Flex-basis content:</b></p>
+                <div class="example">
+                    <div class="border flex-basis content">
+                        <div>1</div>
+                        <div>2</div>
+                        <div class="act">3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <!------------------------------------------------------------------>
+            </section>
+        </div>
+        <div class="content-block">
+            <h1 id="ubuntu" class="main">Ubuntu</h1>
+        </div>
+    </main>
+    <footer>
+        <div class="main-block">
+            <p>Автор: Артем Розанов</p>
+            <p>2023 - 2024 г.</p>
+        </div>
+    </footer>
+</body>
+</html>
